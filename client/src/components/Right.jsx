@@ -1,21 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import Navigation from './Navigation';
 
 const Container = styled.div`
-    position: fixed;
-    bottom: 50%;
-    right: 0;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* width: 100%; */
-    @media (max-width: 768px) 
+position: fixed;
+top: 40%;
+right: 0;
+transform: translateX(220px);
+@media (max-width: 768px) 
     {
     display: none;
     }
+
 `;
 const Wrapper = styled.div`
-    /* width: 100%; */
-    transform: rotate(-90deg);
+transform: rotate(90deg);
+display: flex;
+gap: 1em;
+
 `;
 
 
@@ -23,7 +25,7 @@ const Right = () => {
     return (
         <Container>
             <Wrapper>
-                <pre>Home    About    Projects    Contact</pre>
+                <Navigation />
             </Wrapper>
         </Container>
     )
